@@ -1,5 +1,3 @@
-# react-chords
-
 React library for easily generate string instruments SVG chord diagrams based on [@tombatossals/react-chords
 ](http://github.com/tombatossals/chords-db)
 

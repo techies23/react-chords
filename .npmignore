@@ -3,12 +3,14 @@
 # dependencies
 node_modules
 
-# testing
-coverage
-
-# production
-build
-
 # misc
 .DS_Store
 npm-debug.log
+
+#development
+src
+.editorconfig
+babel.config.js
+package-lock.json
+tsconfig.json
+yarn.lock

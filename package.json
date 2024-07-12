@@ -22,11 +22,11 @@
     "react-dom": "^18.3.1"
   },
   "scripts": {
-    "build": "babel src --out-dir lib --extensions \".ts,.tsx\""
+    "build": "babel src --out-dir build --extensions \".ts,.tsx\""
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/techies23/react-chords"
+    "url": "https://github.com/techies23/react-chords.git"
   },
   "keywords": [
     "svg",
@@ -39,7 +39,7 @@
   "author": "Deepen Bajracharya",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/techies23/react-chordsissues"
+    "url": "https://github.com/techies23/react-chords/issues"
   },
   "homepage": "https://www.imdpen.com/"
 }

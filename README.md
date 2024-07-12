@@ -1,19 +1,23 @@
 # react-chords
 
-React library for easily generate string instruments SVG chord diagrams based on @tombatossals/react-chords
+React library for easily generate string instruments SVG chord diagrams based on [@tombatossals/react-chords
+](http://github.com/tombatossals/chords-db)
+
+This is direct fork of [@tombatossals/react-chords
+](https://github.com/tombatossals/react-chords) which fixes some console errors, support with latest version react and supports typescript.
 
 ## Installation
 
 ### With NPM
 
 ```
-npm install @tombatossals/react-chords
+npm install @techies23/react-chords
 ```
 
 ### With Yarn
 
 ```
-yarn add @tombatossals/react-chords
+yarn add @techies23/react-chords
 ```
 
 ## Usage
@@ -46,8 +50,3 @@ const MyChord = () => {
 
 ReactDOM.render(<MyChord />, document.getElementById("root"));
 ```
-
-## Example of use
-
-Using the [chords-db](http://github.com/tombatossals/chords-db) database we can get this result:
-[![react-chords](https://raw.githubusercontent.com/tombatossals/react-chords/webpage/src/images/react-chords.png)](https://tombatossals.github.io/react-chords/)

@@ -1,28 +1,32 @@
 {
-  "name": "@tombatossals/react-chords",
-  "description": "React library to easily render instrument chord diagrams",
-  "version": "0.2.9",
+  "name": "@techies23/react-chords",
+  "description": "React library to easily render instrument chord diagrams based on @tombatossals/react-chords",
+  "version": "1.0.0",
   "private": false,
   "devDependencies": {
-    "@babel/cli": "^7.6.4",
-    "@babel/core": "^7.6.4",
-    "@babel/node": "^7.6.3",
-    "@babel/preset-env": "^7.6.3",
-    "@babel/preset-react": "^7.6.3",
-    "standard": "^14.3.1"
+    "@babel/cli": "^7.24.8",
+    "@babel/core": "^7.24.8",
+    "@babel/node": "^7.24.8",
+    "@babel/preset-env": "^7.24.8",
+    "@babel/preset-react": "^7.24.7",
+    "@babel/preset-typescript": "^7.24.7",
+    "@types/node": "^20.14.7",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "babel-preset-react": "^6.24.1",
+    "ts-node": "^10.9.2",
+    "typescript": "5.5.2"
   },
   "dependencies": {
-    "prop-types": "^15.7.2",
-    "react": "^16.11.0",
-    "react-dom": "^16.11.0"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "scripts": {
-    "build": "babel src --out-dir lib",
-    "standard": "standard src"
+    "build": "babel src --out-dir lib --extensions \".ts,.tsx\""
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tombatossals/react-chords.git"
+    "url": "git+https://github.com/techies23/react-chords"
   },
   "keywords": [
     "svg",
@@ -32,10 +36,10 @@
     "guitar",
     "ukelele"
   ],
-  "author": "David Rubert",
+  "author": "Deepen Bajracharya",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tombatossals/react-chords/issues"
+    "url": "https://github.com/techies23/react-chordsissues"
   },
-  "homepage": "https://tombatossals.github.io/react-chords"
+  "homepage": "https://www.imdpen.com/"
 }

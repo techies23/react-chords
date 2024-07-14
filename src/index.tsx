@@ -1,8 +1,8 @@
 import React from "react";
 import { ChordProps, ChordType } from "ChordModule";
 import Neck from "./Neck";
-import Barre from "./Barre";
 import Dot from "./Dot";
+import Barre from "./Barre";
 
 const onlyDots = (chord: ChordType) =>
   chord.frets

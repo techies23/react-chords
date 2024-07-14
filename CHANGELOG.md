@@ -1,3 +1,7 @@
+## 1.0.1
+
+- Typescript added in build.
+
 ## 1.0.0
 
 - Added Typescript support

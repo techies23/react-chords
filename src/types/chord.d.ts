@@ -1,5 +1,5 @@
 declare module "ChordModule" {
-  type ChordType = {
+  export type ChordType = {
     frets: number[];
     barres?: number[];
     capo?: boolean;
@@ -7,7 +7,7 @@ declare module "ChordModule" {
     baseFret: number;
   };
 
-  type InstrumentType = {
+  export type InstrumentType = {
     tunings: {
       standard: string[];
     };
@@ -15,7 +15,7 @@ declare module "ChordModule" {
     fretsOnChord: number;
   };
 
-  type ChordProps = {
+  export type ChordProps = {
     chord: any;
     instrument: InstrumentType;
     lite?: boolean;

@@ -1,5 +1,5 @@
 declare module "DotModule" {
-  type DotType = {
+  export type DotType = {
     string: number;
     fret: number;
     finger: 0 | 1 | 2 | 3 | 4 | 5;
@@ -7,7 +7,7 @@ declare module "DotModule" {
     lite: boolean;
   };
 
-  interface OffsetsProp {
+  export interface OffsetsProp {
     [key: number]: number;
   }
 }

@@ -1,5 +1,5 @@
 declare module "BarreModule" {
-  type BarreType = {
+  export type BarreType = {
     frets: [];
     barre: number;
     capo: boolean;
@@ -7,11 +7,11 @@ declare module "BarreModule" {
     finger: 0 | 1 | 2 | 3 | 4 | 5;
   };
 
-  type FretXPositionType = {
+  export type FretXPositionType = {
     [key: number]: number[];
   };
 
-  type OffsetType = {
+  export type OffsetType = {
     [key: number]: number;
   };
 }

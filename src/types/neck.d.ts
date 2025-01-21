@@ -1,5 +1,5 @@
 declare module "NeckModules" {
-  type Offsets = {
+  export type Offsets = {
     [key: number]: {
       x: number;
       y: number;
@@ -8,7 +8,7 @@ declare module "NeckModules" {
   };
 
   // Define props for the Neck component
-  interface NeckProps {
+  export interface NeckProps {
     tuning: string[];
     frets: number[];
     capo?: boolean;

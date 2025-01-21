@@ -20,6 +20,10 @@
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "typescript": "5.5.2"
   },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
   "scripts": {
     "build": "rollup -c --bundleConfigAsCjs",
     "prepublishOnly": "npm run build"

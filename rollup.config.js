@@ -24,7 +24,13 @@ const config = {
     peerDepsExternal(),
     resolve(),
     commonjs(),
-    typescript({ tsconfig: "./tsconfig.json" }),
+    typescript({
+      tsconfig: "./tsconfig.json",
+      declaration: true,
+      declarationDir: "dist/types",
+      rootDir: "src",
+      exclude: ["**/__tests__", "**/*.test.tsx", "node_modules"],
+    }),
     terser(),
   ],
 };

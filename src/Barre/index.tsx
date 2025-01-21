@@ -1,5 +1,20 @@
-import { BarreType, FretXPositionType, OffsetType } from "BarreModule";
 import React from "react";
+
+type BarreType = {
+  frets: [];
+  barre: number;
+  capo: boolean;
+  lite: boolean;
+  finger: 0 | 1 | 2 | 3 | 4 | 5;
+};
+
+type FretXPositionType = {
+  [key: number]: number[];
+};
+
+type OffsetType = {
+  [key: number]: number;
+};
 
 const fretXPosition: FretXPositionType = {
   4: [10, 20, 30, 40, 50],
@@ -40,7 +55,9 @@ const Barre: React.FC<BarreType> = ({ barre, frets, capo, finger, lite }) => {
       {capo && (
         <g>
           <g
-            transform={`translate(${getStringPosition(strings, strings)}, ${positions.fret[barreFrets[0].value]})`}
+            transform={`translate(${getStringPosition(strings, strings)}, ${
+              positions.fret[barreFrets[0].value]
+            })`}
           >
             <path
               d={`
@@ -62,7 +79,9 @@ const Barre: React.FC<BarreType> = ({ barre, frets, capo, finger, lite }) => {
             height={8.25}
           />
           <g
-            transform={`translate(${getStringPosition(1, strings)}, ${positions.fret[barreFrets[0].value]})`}
+            transform={`translate(${getStringPosition(1, strings)}, ${
+              positions.fret[barreFrets[0].value]
+            })`}
           >
             <path
               d={`

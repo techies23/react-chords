@@ -1,6 +1,23 @@
-// src/components/Neck.tsx
-import { NeckProps, Offsets } from "NeckModules";
 import React from "react";
+
+type Offsets = {
+  [key: number]: {
+    x: number;
+    y: number;
+    length: number;
+  };
+};
+
+// Define props for the Neck component
+interface NeckProps {
+  tuning: string[];
+  frets: number[];
+  capo?: boolean;
+  strings: number;
+  baseFret?: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14;
+  fretsOnChord: number;
+  lite?: boolean;
+}
 
 const offsets: Offsets = {
   4: {
@@ -28,14 +45,14 @@ const getNeckPath = (strings: number, fretsOnChord: number) =>
     .concat(
       Array.from({ length: strings })
         .map((_, pos) => getNeckVerticalLine(pos, strings))
-        .join(" "),
+        .join(" ")
     );
 
 const getBarreOffset = (
   strings: number,
   frets: number[],
   baseFret: number,
-  capo: boolean | undefined,
+  capo: boolean | undefined
 ) =>
   strings === 6
     ? frets[0] === 1 || capo
@@ -43,15 +60,15 @@ const getBarreOffset = (
         ? -12
         : -11
       : baseFret > 9
-        ? -10
-        : -7
+      ? -10
+      : -7
     : frets[0] === 1 || capo
-      ? baseFret > 9
-        ? -1
-        : 0
-      : baseFret > 9
-        ? 3
-        : 4;
+    ? baseFret > 9
+      ? -1
+      : 0
+    : baseFret > 9
+    ? 3
+    : 4;
 
 const Neck: React.FC<NeckProps> = ({
   tuning,

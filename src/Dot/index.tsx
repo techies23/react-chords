@@ -1,5 +1,16 @@
 import React from "react";
-import { DotType, OffsetsProp } from "DotModule";
+
+type DotType = {
+  string: number;
+  fret: number;
+  finger: 0 | 1 | 2 | 3 | 4 | 5;
+  strings: number;
+  lite: boolean;
+};
+
+interface OffsetsProp {
+  [key: number]: number;
+}
 
 const positions = {
   string: [50, 40, 30, 20, 10, 0],

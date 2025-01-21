@@ -1,15 +1,35 @@
-import React from "react";
-import { ChordProps, ChordType } from "ChordModule";
 import Neck from "./Neck";
 import Dot from "./Dot";
 import Barre from "./Barre";
 
-const onlyDots = (chord: ChordType) =>
-  chord.frets
-    .map((f, index) => ({ position: index, value: f }))
-    .filter((f) => !chord.barres || chord.barres.indexOf(f.value) === -1);
+type ChordType = {
+  frets: number[];
+  barres?: number[];
+  capo?: boolean;
+  fingers?: number[];
+  baseFret: number;
+};
 
-const Chord: React.FC<ChordProps> = ({ chord, instrument, lite = false }) => {
+type InstrumentType = {
+  tunings: {
+    standard: string[];
+  };
+  strings: number;
+  fretsOnChord: number;
+};
+
+type ChordProps = {
+  chord: any;
+  instrument: InstrumentType;
+  lite?: boolean;
+};
+
+const Chord = ({ chord, instrument, lite = false }: ChordProps) => {
+  const onlyDots = (chord: ChordType) =>
+    chord.frets
+      .map((f, index) => ({ position: index, value: f }))
+      .filter((f) => !chord.barres || chord.barres.indexOf(f.value) === -1);
+
   return chord ? (
     <svg
       width="100%"

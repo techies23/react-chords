@@ -4,6 +4,8 @@ React library for easily generate string instruments SVG chord diagrams based on
 This is direct fork of [@tombatossals/react-chords
 ](https://github.com/tombatossals/react-chords) which fixes some console errors, support with latest version react and supports typescript.
 
+This Library is being used in [Mye Guitar](https://www.mye-guitar.com/chord-library)
+
 ## Installation
 
 ### With NPM

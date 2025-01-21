@@ -7,6 +7,7 @@ import packageJson from "./package.json";
 
 const config = {
   input: "src/index.tsx",
+  external: ["react", "react-dom"],
   output: [
     {
       file: packageJson.main,
